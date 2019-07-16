@@ -46,7 +46,7 @@ let view (config : Config) (model : Model) dispatch =
                 dispatch <| PlaceObstacle i)
       ] []
 
-  let grid   = Array.map cell ([|1 .. mapSize * mapSize|])
+  let grid = List.map cell ([1 .. mapSize * mapSize])
   div [ Style
            [ Width                  containerSize
            ; Height                 containerSize

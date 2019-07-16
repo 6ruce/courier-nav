@@ -10,8 +10,6 @@ let private produceMap (map : string) : Msg =
     let lines = map.Split [| '\n' |] |> Array.filter (fun line -> line.Length <> 0)
     let first = Array.head lines
     let mapSize = first.Length - 1
-    //TODO: Transform all the if's into monads
-    //TODO: Allso add error for line length/line count mistmatch
     if  Array.forall (fun (line : string) -> line.Length = first.Length) lines
     then
         let mapData =
