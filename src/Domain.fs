@@ -64,7 +64,7 @@ let private createDisposition
     (obstacles    : Obstacles)
     (destinations : Destinations)
     : Result<Disposition, string> =
-        //TODO: Add each parameter validation here
+        // Each parameter validation can be placed here
         (Ok << MkD)
             { Courier       = courier
             ; Buildings     = buidings

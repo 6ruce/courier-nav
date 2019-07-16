@@ -14,6 +14,8 @@ let denormalize (mapSize : int) (i : int) =
 (* X *) ((i % mapSize) .ifZeroThen mapSize) - 1,
 (* Y *) mapSize - (i / mapSize - 1 + (i % mapSize) .ifNotZeroThen 1)  - 1
 
+let squareArray size def = Array.init size (fun _ -> Array.create size def)
+
 let range start stop gen =
     if start > stop
     then [for i in start .. - 1 .. stop -> gen i]

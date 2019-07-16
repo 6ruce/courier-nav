@@ -1,6 +1,5 @@
 module Core
 
-open Common
 open Domain
 
 type Model =
