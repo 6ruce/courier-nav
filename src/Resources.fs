@@ -28,7 +28,6 @@ let private produceMap (map : string) : Msg =
                         line) lines
         let (destinations, buildings, couriers, obstacles) =
             Array.fold
-                //TODO: Some weird looking remapping, maybe tune this
                 (fun (accDest, accBuildings, accCouriers, accObstacles) (destinations, buildings, couriers, obstacles, _) ->
                     (List.append accDest destinations, List.append accBuildings buildings, List.append accCouriers couriers, List.append accObstacles obstacles))
                 ([], [], [], [])
