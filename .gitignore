@@ -59,3 +59,15 @@ typings/
 
 # next.js build output
 .next
+
+# Fable related data
+.fable
+src/obj
+src/bin
+
+
+# Idea IDEs files
+.idea
+
+# Bundled scripts
+public/scripts
