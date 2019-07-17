@@ -2,7 +2,7 @@
 
 ![Demo](https://github.com/6ruce/6ruce.github.io/blob/master/images/about/courier-screen.PNG?raw=true)
 
-[Live demo](https://github.com/6ruce/6ruce.github.io/blob/master/images/about/courier-screen.PNG?raw=true "Live demo of the courier traveling app")
+[Live demo](https://6ruce.github.io)
 
 ## Controls
 
@@ -61,7 +61,7 @@
 
 ## Main points
 
-* We have some sort of Traveling Salesman Problem for 'find the shortest path between all destinations' requirement. Fastest but least precise way is to use NN (Nearest Neighbor) heuristic, which was used in the app
+* We have a sort of Traveling Salesman Problem for 'find the shortest path between all destinations' requirement. Fastest but least precise way is to use NN (Nearest Neighbor) heuristic, which was used in the app
 * 'Freezes' during building/obstacle placement are the result of NN search for all nodes respectively, to have shortest path visualized at once. If the whole path visualization is not needed then we can have running time not dependent on the number of destination but only on map sizes
 * Using Fable/React and Html is not the most performant way for showing interface (if our goal to provide fastest response to the end user), but most demo friendly :)
 * HTML rendering part could be optimized by using `canvas` instead of separate block elements, if our goal would be to display large maps in a browser
@@ -77,5 +77,3 @@
 * Start Webpack dev server: `npx webpack-dev-server` or `npm start`
 * After the first compilation is finished, in your browser open: http://localhost:8080/
 * To build the app in release mode, run: `npm run build`, `bundled.js` file with all needed scripts will be placed in `public/scripts` directory
-
-
