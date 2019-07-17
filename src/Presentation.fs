@@ -15,11 +15,11 @@ let view (config : Config) (model : Model) dispatch =
   let denormalize   = denormalize mapSize
   let (Courier courierPos) = disposition.Courier
 
-  let cellColor disposition pos =
+  let cellColor pos =
     if List.contains pos disposition.Path
     then config.PathColor
     else System.String.Empty
-  let cellImage disposition pos =
+  let cellImage pos =
     if pos = courierPos then
       sprintf "url(%s)" <| if disposition.Unreachable then config.ConfusedImage else config.CourierImage
     else
@@ -35,8 +35,8 @@ let view (config : Config) (model : Model) dispatch =
               ; BorderLeft      border
               ; BorderBottom    (if y = 0           then border else "none")
               ; BorderRight     (if x = mapSize - 1 then border else "none")
-              ; BackgroundColor    (cellColor disposition (x, y))
-              ; BackgroundImage    (cellImage disposition (x, y))
+              ; BackgroundColor    (cellColor (x, y))
+              ; BackgroundImage    (cellImage (x, y))
               ; BackgroundSize     "cover"
               ]
             OnClick (fun _ -> dispatch <| PlaceDestination i)

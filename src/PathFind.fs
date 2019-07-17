@@ -20,7 +20,7 @@ let private dijstra
     : (Position * Path option) list =
 
     let pointInsideMap (x, y) = x >= 0 && y >= 0 && x < mapSize && y < mapSize
-    let notBuilding (x, y)          = buildings.[x].[y] = -1
+    let notBuilding    (x, y) = buildings.[x].[y] = -1
     let wage ((neighbourX, neighbourY), g)        =
         match obstacles.[neighbourX].[neighbourY] with
         | -1    -> 1
