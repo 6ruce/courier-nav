@@ -1,6 +1,5 @@
 module Common
 
-//TODO: Find better place for these types
 type Position          = (int * int)
 type Path              = Position list
 
@@ -9,7 +8,7 @@ type System.Int32 with
     member maybeZero.ifZeroThen otherwise    = if maybeZero <> 0 then maybeZero else otherwise
     member maybeZero.ifNotZeroThen otherwise = if maybeZero <> 0 then otherwise else maybeZero
 
-//TODO: Little bit funky, there should be some better way to calculate this
+// Little bit funky, there should be some better way to calculate this
 let denormalize (mapSize : int) (i : int) =
 (* X *) ((i % mapSize) .ifZeroThen mapSize) - 1,
 (* Y *) mapSize - (i / mapSize - 1 + (i % mapSize) .ifNotZeroThen 1)  - 1

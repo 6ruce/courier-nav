@@ -82,5 +82,4 @@ let timer initial =
 Program.mkProgram init update (Presentation.view config)
     |> Program.withReactBatched "elmish-app"
     |> Program.withSubscription timer
-    //|> Program.withConsoleTrace
     |> Program.run

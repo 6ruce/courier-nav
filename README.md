@@ -65,6 +65,7 @@
 * 'Freezes' during building/obstacle placement are the result of NN search for all nodes respectively, to have shortest path visualized at once. If the whole path visualization is not needed then we can have running time not dependent on the number of destination but only on map sizes
 * Using Fable/React and Html is not the most performant way for showing interface (if our goal to provide fastest response to the end user), but most demo friendly :)
 * HTML rendering part could be optimized by using `canvas` instead of separate block elements, if our goal would be to display large maps in a browser
+* Any feedback are very welcome!
 
 ## Requirements
 
