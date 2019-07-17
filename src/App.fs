@@ -22,7 +22,6 @@ let config =
 
 let domain = Domain.Instance({ ObstacleWaitTime = config.DefaultWaitTime })
 
-//TODO: Also react to viewport change
 let initViewport () : Cmd<Msg> =
     let document = Dom.document
     Cmd.OfFunc.either
